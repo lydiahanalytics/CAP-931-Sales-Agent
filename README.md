@@ -294,17 +294,75 @@ This allows the agents to use additional product information when generating:
 
 ## Model Selection
 
-The prototype uses a GPT model through the OpenAI API.
+The prototype uses **GPT-5.4 through the OpenAI Responses API**.
 
-The model was selected because it provides strong capabilities for:
+The model was selected because this project requires a combination of strong natural language understanding, research synthesis, structured business writing, prompt chaining, and tool-enabled web research.
 
-* natural language understanding
-* summarization
-* research synthesis
-* multi-step reasoning
-* sales strategy generation
-* structured business writing
-* tool-enabled web research
+### Accuracy
+
+GPT-5.4 was selected for its ability to synthesize information from multiple agent outputs and produce structured business insights. For this project, accuracy was especially important because the final report includes company strategy, competitor information, leadership research, and sales recommendations.
+
+To reduce the risk of unsupported claims, the system also:
+
+* uses web-enabled research agents
+* prefers official and reputable sources
+* distinguishes confirmed facts from sales inference
+* instructs agents not to invent information
+* preserves source URLs in the final report
+
+### Speed
+
+The model provides strong output quality, but web-enabled research takes longer than a basic single-prompt response because several specialized agents run sequentially.
+
+This prototype accepts the additional processing time because research quality and evidence are more important than instant output for an account-intelligence use case.
+
+A production version could improve speed by:
+
+* caching repeated company research
+* running independent agents concurrently
+* reducing unnecessary web searches
+* using smaller models for simpler tasks
+
+### Cost
+
+OpenAI API usage is usage-based, so every model call and web-search operation adds cost.
+
+The multi-agent design is more expensive than a single prompt because the application uses several specialized calls. However, each agent has a clearly defined task, which improves output quality and makes the workflow easier to evaluate.
+
+Cost can be reduced in production by:
+
+* using smaller models for low-complexity tasks
+* caching prior research
+* limiting repeated searches
+* shortening prompts and outputs
+* only running agents when required fields are complete
+
+### Strengths
+
+* Strong natural language understanding
+* High-quality research synthesis
+* Effective structured business writing
+* Good performance with multi-step prompt workflows
+* Ability to combine outputs from multiple specialized agents
+* Support for tool-enabled web research
+* Strong ability to follow constraints and formatting instructions
+
+### Weaknesses and Limitations
+
+* API usage has a financial cost.
+* Multi-agent workflows can increase latency.
+* Web research can add additional processing time.
+* LLMs may still make unsupported assumptions if prompts are not carefully constrained.
+* Source verification remains important.
+* Sensitive areas such as AI-assisted recruiting require human oversight and governance.
+* The model should support decision-making rather than make autonomous employment decisions.
+
+### Selection Decision
+
+GPT-5.4 was chosen because the project prioritizes **research quality, synthesis, and useful sales intelligence** over the lowest possible cost or fastest possible response time.
+
+For a classroom prototype, this provides a strong balance of accuracy, capability, and implementation simplicity. A production system could use a mixed-model architecture in which smaller and less expensive models handle simple tasks while a more capable model handles research synthesis and final reporting.
+
 
 ### Strengths
 
@@ -534,6 +592,18 @@ The development work was divided into major phases:
 * Documented challenges and solutions
 * Prepared project for final submission
 
+### Estimated Time Allocation
+
+| Development Phase | Estimated Time |
+| --- | ---: |
+| Environment setup and API configuration | 2 hours |
+| Streamlit interface development | 2 hours |
+| Multi-agent architecture and prompting | 4 hours |
+| Web research integration | 3 hours |
+| Testing, debugging, and refinement | 4 hours |
+| Product document upload and validation | 1 hour |
+| Documentation and submission preparation | 2 hours |
+| **Total Estimated Development Time** | **18 hours** |
 ---
 
 ## Running the Project

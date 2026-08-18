@@ -98,6 +98,28 @@ st.divider()
 
 if st.button("Generate Sales Insights", type="primary"):
 
+    required_fields = {
+        "Product Name": product_name,
+        "Prospective Company URL": company_url,
+        "Product Category": product_category,
+        "Competitors": competitors,
+        "Value Proposition": value_proposition,
+        "Target Customer": target_customer,
+    }
+
+    missing_fields = [
+        field_name
+        for field_name, field_value in required_fields.items()
+        if not field_value.strip()
+    ]
+
+    if missing_fields:
+        st.error(
+            "Please complete the following required fields: "
+            + ", ".join(missing_fields)
+        )
+        st.stop()
+
     product_document = extract_uploaded_file(uploaded_file)
 
     context = f"""
