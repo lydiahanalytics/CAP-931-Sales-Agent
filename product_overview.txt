@@ -1,0 +1,20 @@
+AI-Powered Talent Acquisition Platform
+
+Our platform helps enterprise recruiting teams identify qualified candidates faster,
+automate repetitive recruiting tasks, and improve hiring decisions through talent analytics.
+
+Key capabilities:
+- AI-assisted candidate matching
+- Recruiter workflow automation
+- Talent pipeline analytics
+- Human-in-the-loop review
+- Bias and fairness monitoring
+- Audit logs for AI-assisted decisions
+- Integration with existing ATS and HCM systems
+
+Primary business outcomes:
+- Reduced time-to-fill
+- Improved recruiter productivity
+- Better visibility into hiring funnels
+- More consistent candidate evaluation
+- Stronger governance for AI-assisted recruiting
