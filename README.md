@@ -733,6 +733,34 @@ Future versions could include:
 
 ---
 
+## Execution Evidence
+
+The following screenshots demonstrate that the CAP 931 Sales Agent prototype was successfully implemented and tested.
+
+### Streamlit User Interface
+
+![Streamlit Input Screen](evidence/01-streamlit-input-screen.png)
+
+![Streamlit Input Details](evidence/02-streamlit-input-details.png)
+
+### Executive Sales Intelligence Brief
+
+![Executive Sales Intelligence Brief](evidence/03-executive-sales-intelligence-brief.png)
+
+### Competitor Intelligence
+
+![Competitor Insights](evidence/04-competitor-insights.png)
+
+### Research Sources
+
+![Research Sources](evidence/05-research-sources.png)
+
+### Sales Strategy Agent
+
+![Sales Agent Output](evidence/06-sales-agent-output.png)
+
+These screenshots provide execution evidence of the Streamlit interface, multi-agent workflow, web-based research, competitor intelligence, source-backed reporting, and sales strategy generation.
+
 ## Conclusion
 
 The CAP 931 Sales Agent Prototype demonstrates how a multi-agent GPT architecture can support B2B sales research.
